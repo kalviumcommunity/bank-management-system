@@ -216,7 +216,21 @@ public class Signup extends JFrame implements ActionListener {
         String pincode = textPin.getText();
         String state = textState.getText();
 
-//
+        try{
+            if (textName.getText().equals("")){
+                JOptionPane.showMessageDialog(null, "Fill all the fields");
+            }else {
+                Connn c = new Connn();
+                String q = "insert into signup values('"+formno+"', '"+name+"','"+fname+"','"+dob+"','"+gender+"','"+email+"','"+marital+"', '"+address+"', '"+city+"','"+pincode+"','"+state+"' )";
+                System.out.println(q);
+                c.statement.executeUpdate(q);
+//                call next screen
+                setVisible(false);
+            }
+
+        }catch (Exception E){
+            E.printStackTrace();
+        }
 
     }
 
