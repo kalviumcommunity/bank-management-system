@@ -1,5 +1,4 @@
 package bank.management.system;
-
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
@@ -12,9 +11,14 @@ public class main_Class extends JFrame implements ActionListener {
     main_Class(String pin, String cardno) {
         this.pin = pin;
         this.cardno = cardno;
+    }
+    public static void main(String[] args) {
+        new main_Class("","");
+    }
 
-        public static void main (String[]args){
-            new main_Class("", "");
-        }
+    @Override
+    public void actionPerformed(ActionEvent e) {
+
     }
 }
+
